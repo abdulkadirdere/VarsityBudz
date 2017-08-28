@@ -7,24 +7,26 @@
     tools:context="com.example.kadir.varsitybudz.SelectLesson">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/selectMathBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Math"
-        app:layout_constraintRight_toLeftOf="@+id/button2"
+        app:layout_constraintRight_toLeftOf="@+id/selectPhysicsBtn"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        android:layout_marginTop="82dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="119dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="0dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/selectPhysicsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Physics"
         tools:layout_constraintRight_creator="1"
         android:layout_marginEnd="64dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
-        tools:layout_constraintBaseline_creator="1" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/selectMathBtn"
+        tools:layout_constraintBaseline_creator="1"
+        android:layout_marginRight="124dp" />
 </android.support.constraint.ConstraintLayout>

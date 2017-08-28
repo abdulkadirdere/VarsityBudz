@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         studentBtnInit();
     }
 
-    //prof button
+    //button initialisation
     public Button btnStudent;
     public Button btnProf;
 
