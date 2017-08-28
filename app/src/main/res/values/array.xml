@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="items">
+        <item>Mathematics</item>
+        <item>Physical Science</item>
+        <item>Chemistry</item>
+        <item>Information Technology</item>
+        <item>Biology</item>
+    </string-array>
+
+    <string-array name="area">
+        <item>Sandton</item>
+        <item>Rosebank</item>
+        <item>Houghton</item>
+        <item>Braamfontein</item>
+        <item>Auckland Park</item>
+    </string-array>
+</resources>

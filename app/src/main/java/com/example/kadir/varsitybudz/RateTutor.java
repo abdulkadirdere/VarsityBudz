@@ -76,7 +76,6 @@ public class RateTutor extends AppCompatActivity {
                 yearEditTxt.setVisibility(View.VISIBLE);
 
 
-
             }
         });
     }

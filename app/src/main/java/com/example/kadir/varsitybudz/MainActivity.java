@@ -12,17 +12,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        profBtnInit();
+        tutorBtnInit();
         studentBtnInit();
     }
 
     //button initialisation
     public Button btnStudent;
-    public Button btnProf;
+    public Button btnTutor;
 
-    public void profBtnInit() {
-        btnProf = (Button) findViewById(R.id.prof);
-        btnProf.setOnClickListener(new View.OnClickListener() {
+    public void tutorBtnInit() {
+        btnTutor = (Button) findViewById(R.id.tutor);
+        btnTutor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent addLesson = new Intent(MainActivity.this,AddLesson.class);
