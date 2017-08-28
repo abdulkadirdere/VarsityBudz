@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kadir.varsitybudz.AddLesson"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/addMaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Math"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="180dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/addPhysics" />
+
+    <Button
+        android:id="@+id/addPhysics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Physics"
+        android:layout_marginStart="71dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addMaths"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+</android.support.constraint.ConstraintLayout>
