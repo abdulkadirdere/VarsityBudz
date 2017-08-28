@@ -13,15 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:stepSize="1"
+        android:layout_marginEnd="54dp"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/cardNo"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="66dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="68dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -29,7 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rate"
-
         android:layout_marginStart="11dp"
         tools:layout_constraintTop_creator="1"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"
@@ -43,23 +38,24 @@
         android:text="Pay"
         android:clickable="true"
         android:visibility="invisible"
-        android:layout_marginStart="11dp"
+        app:layout_constraintRight_toLeftOf="@+id/yearEditTxt"
+        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintLeft_toLeftOf="@+id/expiryDateEdit" />
+        android:layout_marginBottom="28dp"
+        app:layout_constraintLeft_toLeftOf="@+id/monthEditTxt" />
 
     <TextView
         android:id="@+id/cardTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Card Number"
+        android:text="Card Number:"
         android:layout_marginStart="16dp"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/cardOwnerTxt"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="17dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
@@ -72,12 +68,11 @@
         android:inputType="number"
         android:hint="Enter 16 digit card number"
         android:textSize="15dp"
-        android:layout_marginEnd="31dp"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/cardNameEditTxt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="6dp" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/rate"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/cardNameEditTxt" />
 
     <TextView
         android:id="@+id/cardOwnerTxt"
@@ -85,10 +80,11 @@
         android:layout_height="wrap_content"
         android:text="Name on the Card"
         android:layout_marginStart="16dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/cardNameEditTxt"
-        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="5dp"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardNameEditTxt" />
 
     <EditText
         android:id="@+id/cardNameEditTxt"
@@ -96,24 +92,25 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Name on the Card"
+        android:hint="Name on the Card:"
         android:textSize="15dp"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/cvvEdit"
+        android:maxLength="16"
+        android:layout_marginStart="9dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardNo"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintLeft_toLeftOf="@+id/cardNo" />
+        app:layout_constraintLeft_toRightOf="@+id/cardOwnerTxt" />
 
     <TextView
         android:id="@+id/cvvTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CVV Number"
+        android:text="CVV Number:"
         android:layout_marginStart="16dp"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/expiryTxt"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cvvEdit"
+        tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="36dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
@@ -124,34 +121,55 @@
         android:inputType="number"
         android:hint="CVV Number"
         android:textSize="15dp"
+        tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/expiryDateEdit"
         app:layout_constraintRight_toRightOf="@+id/cardNameEditTxt"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardNameEditTxt"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="14dp"
         app:layout_constraintLeft_toLeftOf="@+id/cardNameEditTxt" />
 
     <TextView
         android:id="@+id/expiryTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Expiry Date"
+        android:text="Expiry Date:"
         android:layout_marginStart="16dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/expiryDateEdit"
+        app:layout_constraintBaseline_toBaselineOf="@+id/monthEditTxt"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
-        android:id="@+id/expiryDateEdit"
+        android:id="@+id/monthEditTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
+        android:ems="3"
+        android:inputType="number"
+        android:hint="MM"
+        android:maxLength="2"
+        app:layout_constraintRight_toLeftOf="@+id/yearEditTxt"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/payBtn"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintLeft_toLeftOf="@+id/cvvEdit" />
+        app:layout_constraintBottom_toBottomOf="@+id/payBtn"
+        android:layout_marginEnd="23dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginBottom="124dp"
+        app:layout_constraintTop_toTopOf="@+id/cardOwnerTxt" />
+
+    <EditText
+        android:id="@+id/yearEditTxt"
+        android:layout_width="121dp"
+        android:layout_height="42dp"
+        android:ems="4"
+        android:inputType="number"
+        android:hint="YYYY"
+        android:maxLength="4"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="38dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/monthEditTxt"
+        tools:layout_constraintBaseline_creator="1" />
+
 </android.support.constraint.ConstraintLayout>

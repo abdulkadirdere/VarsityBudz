@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.TextView;
 
 public class RateTutor extends AppCompatActivity {
 
@@ -21,6 +22,12 @@ public class RateTutor extends AppCompatActivity {
     public RatingBar ratingBar;
     public Button rateBtn;
     public Button payBtn;
+
+    public TextView cardTxt;
+    public TextView cardOwnerTxt;
+    public TextView cardNameEditTxt;
+    public TextView cvvTxt;
+    public TextView expiryTxt;
     public EditText cardNo;
 
     public void rateBar(){
@@ -36,10 +43,12 @@ public class RateTutor extends AppCompatActivity {
     public void rateBtnInit(){
         rateBtn = (Button) findViewById(R.id.rate);
         payBtn = (Button) findViewById(R.id.payBtn);
+        cardTxt = (TextView) findViewById(R.id.cardTxt);
         rateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 payBtn.setVisibility(View.VISIBLE);
+
             }
         });
     }
