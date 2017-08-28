@@ -2,6 +2,7 @@ package com.example.kadir.varsitybudz;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -74,7 +75,12 @@ public class RateTutor extends AppCompatActivity {
                 cvvEdit.setVisibility(View.VISIBLE);
                 monthEditTxt.setVisibility(View.VISIBLE);
                 yearEditTxt.setVisibility(View.VISIBLE);
-
+                ratingBar.setOnTouchListener(new View.OnTouchListener() {
+                    public boolean onTouch(View v, MotionEvent event) {
+                        return true;
+                    }
+                });
+                ratingBar.setFocusable(false);
 
             }
         });
