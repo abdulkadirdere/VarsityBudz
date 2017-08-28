@@ -56,7 +56,9 @@
         app:layout_constraintBottom_toTopOf="@+id/cardOwnerTxt"
         tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="17dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="invisible"
+        />
 
     <EditText
         android:id="@+id/cardNo"
@@ -72,7 +74,9 @@
         android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@+id/rate"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/cardNameEditTxt" />
+        app:layout_constraintLeft_toLeftOf="@+id/cardNameEditTxt"
+        android:visibility="invisible"
+        />
 
     <TextView
         android:id="@+id/cardOwnerTxt"
@@ -84,7 +88,9 @@
         android:layout_marginTop="5dp"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardNameEditTxt" />
+        app:layout_constraintTop_toTopOf="@+id/cardNameEditTxt"
+        android:visibility="invisible"
+        />
 
     <EditText
         android:id="@+id/cardNameEditTxt"
@@ -100,7 +106,9 @@
         android:layout_marginTop="13dp"
         app:layout_constraintTop_toBottomOf="@+id/cardNo"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/cardOwnerTxt" />
+        app:layout_constraintLeft_toRightOf="@+id/cardOwnerTxt"
+        android:visibility="invisible"
+        />
 
     <TextView
         android:id="@+id/cvvTxt"
@@ -111,7 +119,9 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/cvvEdit"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="invisible"
+        />
 
     <EditText
         android:id="@+id/cvvEdit"
@@ -127,7 +137,9 @@
         android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@+id/cardNameEditTxt"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/cardNameEditTxt" />
+        app:layout_constraintLeft_toLeftOf="@+id/cardNameEditTxt"
+        android:visibility="invisible"
+        />
 
     <TextView
         android:id="@+id/expiryTxt"
@@ -138,7 +150,9 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/monthEditTxt"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="invisible"
+        />
 
     <EditText
         android:id="@+id/monthEditTxt"
@@ -156,7 +170,9 @@
         android:layout_marginEnd="23dp"
         android:layout_marginTop="126dp"
         android:layout_marginBottom="124dp"
-        app:layout_constraintTop_toTopOf="@+id/cardOwnerTxt" />
+        app:layout_constraintTop_toTopOf="@+id/cardOwnerTxt"
+        android:visibility="invisible"
+        />
 
     <EditText
         android:id="@+id/yearEditTxt"
@@ -170,6 +186,8 @@
         android:layout_marginEnd="38dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBaseline_toBaselineOf="@+id/monthEditTxt"
-        tools:layout_constraintBaseline_creator="1" />
+        tools:layout_constraintBaseline_creator="1"
+        android:visibility="invisible"
+        />
 
 </android.support.constraint.ConstraintLayout>
