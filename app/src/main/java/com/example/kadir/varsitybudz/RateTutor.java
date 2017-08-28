@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RatingBar;
 
 public class RateTutor extends AppCompatActivity {
@@ -14,11 +15,13 @@ public class RateTutor extends AppCompatActivity {
         setContentView(R.layout.activity_rate_tutor);
         rateBar();
         rateBtnInit();
+
     }
 
     public RatingBar ratingBar;
     public Button rateBtn;
     public Button payBtn;
+    public EditText cardNo;
 
     public void rateBar(){
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
@@ -40,5 +43,6 @@ public class RateTutor extends AppCompatActivity {
             }
         });
     }
+
 
 }
