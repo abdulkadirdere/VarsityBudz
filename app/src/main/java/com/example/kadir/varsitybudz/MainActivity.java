@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btnStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent selectLesson = new Intent(MainActivity.this, SelectLesson.class);
+                Intent selectLesson = new Intent(MainActivity.this, BookingActivity.class);
                 startActivity(selectLesson);
             }
         });

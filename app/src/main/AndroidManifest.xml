@@ -19,6 +19,7 @@
         <activity android:name=".AddLesson" />
         <activity android:name=".SelectLesson" />
         <activity android:name=".RateTutor" />
+        <activity android:name=".BookingActivity"></activity>
     </application>
 
 </manifest>
