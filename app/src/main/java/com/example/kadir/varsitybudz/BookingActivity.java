@@ -31,6 +31,7 @@ public class BookingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 createDialog();
+
             }
         });
     }
@@ -39,14 +40,21 @@ public class BookingActivity extends AppCompatActivity {
     //completion message
     private void createDialog() {
         AlertDialog.Builder alertDiag = new AlertDialog.Builder(this);
-        alertDiag.setMessage("Lesson has been booked");
+        alertDiag.setMessage("Payment has been made");
         alertDiag.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Intent ceateLesson = new Intent(BookingActivity.this, MainActivity.class);
-                startActivity(ceateLesson);
+                Intent rateTutor = new Intent(BookingActivity.this,RateTutor.class);
+                startActivity(rateTutor);
             }
 
+        });
+        alertDiag.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent backTo = new Intent(BookingActivity.this,BookingActivity.class);
+                startActivity(backTo);
+            }
         });
         alertDiag.create().show();
     }

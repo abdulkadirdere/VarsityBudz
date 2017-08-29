@@ -1,5 +1,8 @@
 package com.example.kadir.varsitybudz;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -17,7 +20,7 @@ public class RateTutor extends AppCompatActivity {
         setContentView(R.layout.activity_rate_tutor);
         rateBar();
         rateBtnInit();
-
+        payBtn();
     }
 
     public RatingBar ratingBar;
@@ -86,5 +89,29 @@ public class RateTutor extends AppCompatActivity {
         });
     }
 
+    //completion message
+    private void createDialog() {
+        AlertDialog.Builder alertDiag = new AlertDialog.Builder(this);
+        alertDiag.setMessage("Lesson has been booked");
+        alertDiag.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent main = new Intent(RateTutor.this,MainActivity.class);
+                startActivity(main);
+            }
+
+        });
+        alertDiag.create().show();
+    }
+    public void payBtn(){
+        Button submit = (Button) findViewById(R.id.payBtn);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createDialog();
+
+            }
+        });
+    }
 
 }
