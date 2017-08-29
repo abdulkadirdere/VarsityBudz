@@ -1,12 +1,13 @@
 package com.example.kadir.varsitybudz;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.app.TimePickerDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -20,8 +21,39 @@ public class BookingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
+        submitBtn();
     }
 
+
+    public void submitBtn(){
+        Button submit = (Button) findViewById(R.id.submit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createDialog();
+            }
+        });
+    }
+
+
+    //completion message
+    private void createDialog() {
+        AlertDialog.Builder alertDiag = new AlertDialog.Builder(this);
+        alertDiag.setMessage("Lesson has been booked");
+        alertDiag.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent ceateLesson = new Intent(BookingActivity.this, MainActivity.class);
+                startActivity(ceateLesson);
+            }
+
+        });
+        alertDiag.create().show();
+    }
+
+
+
+    //date picker
     public static class DatePickerFragment extends DialogFragment
             implements DatePickerDialog.OnDateSetListener {
 
