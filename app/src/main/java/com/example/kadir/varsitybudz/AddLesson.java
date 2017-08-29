@@ -12,10 +12,13 @@ import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -31,7 +34,6 @@ public class AddLesson extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_lesson);
         createLesson();
-
     }
 
 
@@ -70,6 +72,7 @@ public class AddLesson extends AppCompatActivity {
         //static TextView dateEditTxt = (TextView) findViewById(R.id.dateEditTxt);
 
         @Override
+
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             // Use the current date as the default date in the picker
             final Calendar c = Calendar.getInstance();
@@ -117,7 +120,7 @@ public class AddLesson extends AppCompatActivity {
         }
     }
     public void showTimePickerDialog(View v) {
-        DialogFragment newFragment = new BookingActivity.TimePickerFragment();
+        DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getFragmentManager(), "Time Picker");
         TextView timeEditTxt = (TextView) findViewById(R.id.timeEditTxt);
     }
