@@ -92,7 +92,7 @@ public class RateTutor extends AppCompatActivity {
     //completion message
     private void createDialog() {
         AlertDialog.Builder alertDiag = new AlertDialog.Builder(this);
-        alertDiag.setMessage("Lesson has been booked");
+        alertDiag.setMessage("Payment has been made");
         alertDiag.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

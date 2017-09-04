@@ -40,7 +40,7 @@ public class BookingActivity extends AppCompatActivity {
     //completion message
     private void createDialog() {
         AlertDialog.Builder alertDiag = new AlertDialog.Builder(this);
-        alertDiag.setMessage("Payment has been made");
+        alertDiag.setMessage("Booking has been made");
         alertDiag.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

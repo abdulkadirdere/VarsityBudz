@@ -122,6 +122,6 @@ public class AddLesson extends AppCompatActivity {
     public void showTimePickerDialog(View v) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getFragmentManager(), "Time Picker");
-        TextView timeEditTxt = (TextView) findViewById(R.id.timeEditTxt);
+        //TextView timeEditTxt = (TextView) findViewById(R.id.timeEditTxt);
     }
 }

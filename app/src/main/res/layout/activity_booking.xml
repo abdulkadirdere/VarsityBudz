@@ -15,12 +15,10 @@
         android:text="Pick Date"
         android:onClick="showDatePickerDialog"
         tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintTop_toBottomOf="@+id/dropDownList"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/dropDownList"
-        android:layout_marginLeft="47dp"
-        android:layout_marginStart="47dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/dropDownList" />
 
     <TextView
         android:id="@+id/subject"
@@ -53,53 +51,37 @@
         android:layout_height="wrap_content"
         android:text="Date"
         android:layout_marginStart="16dp"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintBaseline_toBaselineOf="@+id/datePick2"
+        tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="26dp"
         app:layout_constraintLeft_toLeftOf="parent" />
-
-    <TextView
-        android:id="@+id/dateEditTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date"
-        android:layout_marginEnd="25dp"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintRight_toRightOf="@+id/dropDownList"
-        android:layout_marginBottom="26dp" />
 
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
+        tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="16dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
 
     <!-- Blah -->
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="213dp"
+        android:layout_width="405dp"
+        android:layout_height="188dp"
+        tools:layout_editor_absoluteX="-7dp"
         tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="64dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="70dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/datePick2">
+        android:layout_marginTop="66dp"
+        android:layout_marginBottom="71dp"
+        app:layout_constraintTop_toTopOf="@+id/dateTxt">
 
         <TableRow
             android:id="@+id/firstRow"
